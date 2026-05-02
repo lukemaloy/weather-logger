@@ -23,6 +23,7 @@ jobs:
       - name: Run the script
         env:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+          TZ: "America/New_York"
         run: python weather_logger.py
         
       - name: Save the spreadsheet back to GitHub
